@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const addTodo = () => {
+const [input, setInput] =useState("");
     // handleSubmit function to handle form submission
+    const addTodoHandler = (e) => {
+        e.preventDefault();
+        if (input.trim()) {
+            // Dispatch the addTodo action with the input value
+            setInput("");
+        }
+    };
 
     return (
-        <form className="space-x-3 mt-12">
+        <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
             <input
                 type="text"
                 placeholder="Add a new todo..."
