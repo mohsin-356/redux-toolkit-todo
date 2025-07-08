@@ -7,7 +7,7 @@ const AddTodo = () => {
     // handleSubmit function to handle form submission
     const addTodoHandler = (e) => {
         e.preventDefault();
-        input = input.trim();
+        // input = input.trim();
         dispatch(addTodo(input));
         setInput("");
     };
